@@ -53,10 +53,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe
+CMAKE_SOURCE_DIR = D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build
+CMAKE_BINARY_DIR = D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/TaskManagerWannaBe.dir/clean
 CMakeFiles/TaskManagerWannaBe.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TaskManagerWannaBe.dir\build.make CMakeFiles/TaskManagerWannaBe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TaskManagerWannaBe.dir\build.make CMakeFiles/TaskManagerWannaBe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build\CMakeFiles --progress-num=1,2 "Built target TaskManagerWannaBe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build\CMakeFiles --progress-num=1,2 "Built target TaskManagerWannaBe"
 .PHONY : CMakeFiles/TaskManagerWannaBe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TaskManagerWannaBe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/TaskManagerWannaBe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build\CMakeFiles 0
 .PHONY : CMakeFiles/TaskManagerWannaBe.dir/rule
 
 # Convenience name for target.

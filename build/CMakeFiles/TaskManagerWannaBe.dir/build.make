@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe
+CMAKE_SOURCE_DIR = D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build
+CMAKE_BINARY_DIR = D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TaskManagerWannaBe.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/TaskManagerWannaBe.dir/progress.make
 include CMakeFiles/TaskManagerWannaBe.dir/flags.make
 
 CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj: CMakeFiles/TaskManagerWannaBe.dir/flags.make
-CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj: D:/storage/source/repos/projects/TaskManager/TaskManagerWannaBe/src/main.cpp
+CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj: D:/storage/pcsource/myrepositories/projects/programing/src/Repos/TaskManager/TaskManagerWannaBe/src/main.cpp
 CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj: CMakeFiles/TaskManagerWannaBe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj"
-	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj -MF CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.obj.d -o CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.obj -c D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj"
+	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.obj -MF CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.obj.d -o CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.obj -c D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\src\main.cpp
 
 CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.i"
-	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\src\main.cpp > CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.i
+	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\src\main.cpp > CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.i
 
 CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TaskManagerWannaBe.dir/src/main.cpp.s"
-	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\src\main.cpp -o CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.s
+	C:\ProgramData\chocolatey\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\src\main.cpp -o CMakeFiles\TaskManagerWannaBe.dir\src\main.cpp.s
 
 # Object files for target TaskManagerWannaBe
 TaskManagerWannaBe_OBJECTS = \
@@ -94,7 +94,7 @@ TaskManagerWannaBe.exe: CMakeFiles/TaskManagerWannaBe.dir/build.make
 TaskManagerWannaBe.exe: CMakeFiles/TaskManagerWannaBe.dir/linkLibs.rsp
 TaskManagerWannaBe.exe: CMakeFiles/TaskManagerWannaBe.dir/objects1.rsp
 TaskManagerWannaBe.exe: CMakeFiles/TaskManagerWannaBe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TaskManagerWannaBe.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TaskManagerWannaBe.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TaskManagerWannaBe.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/TaskManagerWannaBe.dir/clean:
 .PHONY : CMakeFiles/TaskManagerWannaBe.dir/clean
 
 CMakeFiles/TaskManagerWannaBe.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build D:\storage\source\repos\projects\TaskManager\TaskManagerWannaBe\build\CMakeFiles\TaskManagerWannaBe.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build D:\storage\pcsource\myrepositories\projects\programing\src\Repos\TaskManager\TaskManagerWannaBe\build\CMakeFiles\TaskManagerWannaBe.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/TaskManagerWannaBe.dir/depend
 
