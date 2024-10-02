@@ -1,0 +1,9 @@
+Package: gl3w
+Version: 2018-05-31
+Port-Version: 5
+Depends: egl-registry, opengl-registry, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 08f6c7c97c77cd4883028c2d5e5417d34e39f2483d749c9f46686de29080f5a1
+Description: Simple OpenGL core profile loading
+Status: install ok installed

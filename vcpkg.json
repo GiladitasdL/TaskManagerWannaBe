@@ -1,5 +1,14 @@
 {
-    "name": "taskmanager",
-    "version": "1.0",
-    "dependencies": [ "imgui", "glfw3", "glad"]
+  "name": "taskmanagerwannabe",
+  "version": "1.0",
+  "dependencies": [
+    {
+      "name": "imgui",
+      "features": ["opengl3-binding", "glfw-binding"]
+    },
+    "glad",
+    "glfw3",
+    "gl3w"
+    
+  ]
 }

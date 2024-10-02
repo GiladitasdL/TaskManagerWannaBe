@@ -1,12 +1,22 @@
+cmake_minimum_required(VERSION 3.30.3)
 
-cmake_minimum_required(VERSION 3.13.4)
+set(CMAKE_TOOLCHAIN_FILE "C:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-project(TaskManagerWannaBe) 
+#set(CMAKE_PREFIX_PATH "C:/tools/vcpkg/installed/x64-windows")
 
-set(CMAKE_CXX_STANDARD 11)
-set(DCMAKE_TOOLCHAIN_FILE "D:/storage/pcsource/myrepositories/projects/programing/libraries/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain file")
+include_directories("${CMAKE_PREFIX_PATH}/include")
+
+project(TaskManagerWannaBe)
+
+find_package(glad CONFIG REQUIRED)
+find_package(imgui CONFIG REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
+find_package(gl3w CONFIG REQUIRED)
 
 add_executable(${PROJECT_NAME} src/main.cpp)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE glad::glad imgui::imgui glfw unofficial::gl3w::gl3w)
+
 
 #name.h .code
 #para name.cpp #include "name.h"
