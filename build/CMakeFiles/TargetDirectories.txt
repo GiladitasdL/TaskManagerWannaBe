@@ -1,3 +1,0 @@
-D:/storage/pcsource/myrepositories/projects/programing/src/Repos/TaskManager/TaskManagerWannaBe/build/CMakeFiles/TaskManagerWannaBe.dir
-D:/storage/pcsource/myrepositories/projects/programing/src/Repos/TaskManager/TaskManagerWannaBe/build/CMakeFiles/ALL_BUILD.dir
-D:/storage/pcsource/myrepositories/projects/programing/src/Repos/TaskManager/TaskManagerWannaBe/build/CMakeFiles/ZERO_CHECK.dir

@@ -9,14 +9,19 @@
 #include <string>
 #include <ctime>
 
-// to-do lista y Eisenhower M
+// struct para tasks
 struct Task {
-    std::string title;
+    std::string title;  // Use std::string for text
     bool isChecked;
+    int id;
     int quadrant; // cuadrantes de la matriz (1-4)
+    Task(const std::string& title, bool isChecked, int id) : title(title), isChecked(isChecked), id(id) {};
 };
 
-// la data como string
+char newTaskBuffer[140] = "";  // Buffer to input tasks
+
+
+// fecha
 std::string getCurrentDate() {
     time_t now = time(0);
     tm* ltm = localtime(&now);
@@ -24,27 +29,40 @@ std::string getCurrentDate() {
     sprintf(date, "%04d-%02d-%02d", 1900 + ltm->tm_year, 1 + ltm->tm_mon, ltm->tm_mday);
     return std::string(date);
 }
-
-//  task list
-std::vector<Task> tasks = {
-    {"Task 1", false, 1},
-    {"Task 2", false, 2},
-    {"Task 3", false, 3},
-    {"Task 4", false, 4}
-};
+std::vector<Task> tasks ;
+std::vector<Task> tasksTomorrow;
 
 void drawToDoList() {
-    ImGui::Begin("To-Do List");
-    ImGui::Text("Today's Date: %s", getCurrentDate().c_str());
+    ImGui::SetNextWindowSize(ImVec2(300.0f, 450.0f));  // dimensions
+    ImGui::SetNextWindowPos(ImVec2(50.0f, 50.0f));   // pos X = 200, pos Y = 100
 
+    ImGui::Begin("To-Do List");
+
+    ImGui::Text("Today's Date: %s", getCurrentDate().c_str());
     ImGui::Separator();
+    // Display task input box 
+    ImGui::InputText("New Task", newTaskBuffer, sizeof(newTaskBuffer));
+    //the button or enter 
+    bool addTaskPressed = ImGui::Button("Add Task");
+
+    if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
+        addTaskPressed = true; //Enter 
+    }
+
+    if (addTaskPressed) {
+        if (strlen(newTaskBuffer) > 0) {
+            tasks.emplace_back(newTaskBuffer, false, tasks.size()+ 1);
+            newTaskBuffer[0] = '\0';  // Clear 
+        }
+    }
     for (size_t i = 0; i < tasks.size(); ++i) {
         ImGui::Checkbox(tasks[i].title.c_str(), &tasks[i].isChecked);
     }
+
     ImGui::End();
 }
-
 void drawEisenhowerMatrix() {
+
     ImGui::Begin("Eisenhower Matrix");
 
     if (ImGui::BeginTable("Matrix", 2)) {
@@ -56,7 +74,7 @@ void drawEisenhowerMatrix() {
                 ImGui::Text(task.title.c_str());
         }
 
-        // Q2: No Urgente pero Importante
+        // Q2: No urgente pero Importante
         ImGui::TableNextColumn();
         ImGui::Text("Not Urgent but Important (Q2)");
         for (auto& task : tasks) {
@@ -86,12 +104,31 @@ void drawEisenhowerMatrix() {
 }
 
 void drawTomorrowSection() {
-    ImGui::Begin("Important for Tomorrow");
+
+    ImGui::SetNextWindowSize(ImVec2(300.0f, 450.0f));  // dimensions
+    ImGui::SetNextWindowPos(ImVec2(400.0f, 50.0f));   // pos X = , pos Y = 
+
+    ImGui::Begin("Important for tomorrow");
     static char tomorrowTask[128] = "";
     ImGui::InputText("Task", tomorrowTask, sizeof(tomorrowTask));
-    if (ImGui::Button("Add Task")) {
-        tasks.push_back({tomorrowTask, false, 1});  // Agregar a Q1 por ahora
-        strcpy(tomorrowTask, ""); // limpiar input
+    //si se toca el boton o el enter
+    bool addTaskPressed = ImGui::Button("Add Task");
+
+    if (ImGui::IsKeyPressed(ImGuiKey_Enter)) {
+        addTaskPressed = true; //si se presiona enter
+    }
+
+    if (addTaskPressed){
+         if (strlen(tomorrowTask) > 0) {
+             // agrega a la lista
+                tasksTomorrow.emplace_back(tomorrowTask, false, tasksTomorrow.size()+ 1);
+                tomorrowTask[0] = '\0';  // Clear buffer after adding
+            }
+            
+    }
+
+    for (size_t i = 0; i < tasksTomorrow.size(); ++i) {
+        ImGui::Checkbox(tasksTomorrow[i].title.c_str(), &tasksTomorrow[i].isChecked);
     }
     ImGui::End();
 }
@@ -119,7 +156,8 @@ int main() {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // crear ventana
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "Task Manager", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(920, 550, "Task Manager", NULL, NULL);
+
     if (!window) {
         std::cerr << "No pude construir la ventana!" << std::endl;
         glfwTerminate();
@@ -156,11 +194,15 @@ int main() {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
+        glViewport(0, 0, 1280, 720); // OpenGL viewport
+        glClearColor(0.45f, 0.55f, 0.60f, 1.00f);  
+        glClear(GL_COLOR_BUFFER_BIT);
+
         // Dibuja la UI
         drawToDoList();
-        drawEisenhowerMatrix();
+      //  drawEisenhowerMatrix();
         drawTomorrowSection();
-        drawCatsSection();
+       // drawCatsSection();
 
         // Rendering
         ImGui::Render();
